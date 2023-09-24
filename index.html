@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -82,22 +83,71 @@
         .contact-btn:hover {
             background-color: #555;
         }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 10px;
+        }
+
+        .navbar {
+            list-style: none;
+            padding: 5px;
+        }
+
+        .navbar li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            padding: 5px 0;
+            transition: color 0.3s, border-radius 0.3s, box-shadow 0.3s;
+            border: 2px dotted transparent;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px rgba(41, 243, 14, 0);
+        }
+
+        .navbar a:hover {
+            color: #f3d52a;
+            border-color: #e2dede;
+            border-radius: 10px;
+            transform: scale(1.5);
+            box-shadow: 0px 0px 10px rgba(47, 245, 8, 0.2);
+            transition: all 0.3s;
+        }
     </style>
 </head>
+
 <body>
     <header>
         <img src="manish.jpg" alt="Manish Himalaya" class="profile-img">
         <h1>Manish Himalaya</h1>
         <p>Web Developer</p>
     </header>
+    <nav>
+        <ul class="navbar">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#cv">CV</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+    </nav>
 
     <div class="container">
-        <section class="section">
+        <section class="section" id="about">
             <h2>About Me</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod velit vitae justo cursus, non scelerisque leo vestibulum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod velit vitae justo cursus, non
+                scelerisque leo vestibulum.</p>
         </section>
 
-        <section class="section">
+        <section class="section" id="skills">
             <h2>Skills</h2>
             <ul class="skills">
                 <li>HTML5</li>
@@ -108,22 +158,42 @@
             </ul>
         </section>
 
-        <section class="section">
+        <section class="section" id="portfolio">
             <h2>Portfolio</h2>
-            
-            
+
+
             <!-- Add your portfolio projects here -->
         </section>
-        <section class="section">
+        <section class="section" id="cv">
             <h2>CV</h2>
             <p>Watch my CV:</p>
             <a class="contact-btn" href="manish.pdf" target="_blank">Watch CV</a>
         </section>
-        <section class="section">
+        <section class="section" id="contact">
             <h2>Contact Me</h2>
             <p>If you would like to get in touch, feel free to send me an email:</p>
             <a class="contact-btn" href="mailto:manishhimalaya64@gmail.com">Contact</a>
         </section>
     </div>
+    <script>
+        const navbarLinks = document.querySelectorAll('.navbar a');
+
+        navbarLinks.forEach((link) => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop,
+                        behavior: 'smooth',
+                    });
+                }
+            });
+        });
+    </script>
+
 </body>
+
 </html>
