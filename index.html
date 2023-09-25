@@ -121,6 +121,191 @@
             box-shadow: 0px 0px 10px rgba(47, 245, 8, 0.2);
             transition: all 0.3s;
         }
+
+        #portfolio {
+            background-color: #333;
+            padding: 60px 0;
+        }
+
+        #portfolio h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .portfolio-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .portfolio-item {
+            width: calc(33.33% - 20px);
+            /* Adjust the width and spacing as needed */
+            margin: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .portfolio-item img {
+            max-width: 100%;
+            height: auto;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .portfolio-item h3 {
+            font-size: 20px;
+            margin: 15px 0;
+            color: #333;
+        }
+
+        .portfolio-item p {
+            font-size: 16px;
+            padding: 0 20px;
+            color: #666;
+        }
+
+        .portfolio-item a {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .portfolio-item a:hover {
+            background-color: #555;
+            color: #fff;
+            transform: scale(1.05);
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            background-color: #333;
+            color: #fff;
+            width: 200px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 50%;
+            overflow-y: auto;
+
+        }
+
+        .sidebar-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar-links li {
+            margin: 0;
+        }
+
+        .sidebar-links a {
+            display: block;
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+
+
+        .sidebar-links a.active {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 30px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-logo img {
+            width: 100px;
+            /* Adjust the width as needed */
+            height: auto;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin: 10px 0;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #f3d52a;
+        }
+
+        .footer-social a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .footer-social a:hover {
+            color: #f3d52a;
+        }
+
+        .footer-info p {
+            margin: 5px 0;
+        }
+
+        /* Media Query for Responsiveness */
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-logo {
+                margin-bottom: 20px;
+            }
+
+            .footer-links {
+                margin-bottom: 20px;
+            }
+
+            .footer-links ul {
+                text-align: center;
+            }
+
+            .footer-social {
+                margin-bottom: 20px;
+            }
+        }
     </style>
 </head>
 
@@ -139,60 +324,145 @@
             <li><a href="#contact">Contact Me</a></li>
         </ul>
     </nav>
+    <div class="content">
+        <div class="sidebar">
+            <ul class="sidebar-links">
 
-    <div class="container">
-        <section class="section" id="about">
-            <h2>About Me</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod velit vitae justo cursus, non
-                scelerisque leo vestibulum.</p>
-        </section>
-
-        <section class="section" id="skills">
-            <h2>Skills</h2>
-            <ul class="skills">
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript</li>
-                <li>ReactJS</li>
-                <li>Responsive Web Design</li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#cv">CV</a></li>
+                <li><a href="#contact">Contact Me</a></li>
             </ul>
-        </section>
+        </div>
 
-        <section class="section" id="portfolio">
-            <h2>Portfolio</h2>
+        <div class="container">
+            <section class="section" id="about">
+                <h2>About Me</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod velit vitae justo cursus, non
+                    scelerisque leo vestibulum.</p>
+            </section>
+
+            <section class="section" id="skills">
+                <h2>Skills</h2>
+                <ul class="skills">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>ReactJS</li>
+                    <li>Responsive Web Design</li>
+                </ul>
+            </section>
+
+            <section class="section" id="portfolio">
+                <h2>Portfolio</h2>
+
+                <div class="portfolio-container">
+                    <div class="portfolio-item">
+                        <img src="project1.jpg" alt="Project 1">
+                        <h3>Project 1</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod velit vitae justo
+                            cursus.</p>
+                        <a href="#">View Details</a>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <img src="project2.jpg" alt="Project 2">
+                        <h3>Project 2</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod velit vitae justo
+                            cursus.</p>
+                        <a href="#">View Details</a>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <img src="project3.jpg" alt="Project 3">
+                        <h3>Project 3</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod velit vitae justo
+                            cursus.</p>
+                        <a href="#">View Details</a>
+                    </div>
+                </div>
 
 
-            <!-- Add your portfolio projects here -->
-        </section>
-        <section class="section" id="cv">
-            <h2>CV</h2>
-            <p>Watch my CV:</p>
-            <a class="contact-btn" href="manish.pdf" target="_blank">Watch CV</a>
-        </section>
-        <section class="section" id="contact">
-            <h2>Contact Me</h2>
-            <p>If you would like to get in touch, feel free to send me an email:</p>
-            <a class="contact-btn" href="mailto:manishhimalaya64@gmail.com">Contact</a>
-        </section>
-    </div>
-    <script>
-        const navbarLinks = document.querySelectorAll('.navbar a');
+                <!-- Add your portfolio projects here -->
+            </section>
+            <section class="section" id="cv">
+                <h2>CV</h2>
+                <p>Watch my CV:</p>
+                <a class="contact-btn" href="manish.pdf" target="_blank">Watch CV</a>
+            </section>
+            <section class="section" id="contact">
+                <h2>Contact Me</h2>
+                <p>If you would like to get in touch, feel free to send me an email:</p>
+                <a class="contact-btn" href="mailto:manishhimalaya64@gmail.com">Contact</a>
+            </section>
+        </div>
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="Company Logo">
+                </div>
+                <div class="footer-links">
+                    <ul>
 
-        navbarLinks.forEach((link) => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const targetId = link.getAttribute('href').substring(1);
-                const targetSection = document.getElementById(targetId);
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#cv">CV</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                </div>
+            </div>
+            <div class="footer-info">
+                <p>&copy; 2023 Company Name. All rights reserved.</p>
+                <p>Email: contact@company.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
+            </div>
+        </footer>
 
-                if (targetSection) {
-                    window.scrollTo({
-                        top: targetSection.offsetTop,
-                        behavior: 'smooth',
-                    });
-                }
+        <script>
+            const navbarLinks = document.querySelectorAll('.navbar a');
+
+            navbarLinks.forEach((link) => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop,
+                            behavior: 'smooth',
+                        });
+                    }
+                });
             });
-        });
-    </script>
+
+            const sidebarLinks = document.querySelectorAll('.sidebar-links a');
+            const sections = document.querySelectorAll('.section');
+
+            function highlightLink() {
+                let index = sections.length;
+
+                while (--index && window.scrollY + 50 < sections[index].offsetTop) { }
+
+                sidebarLinks.forEach((link) => {
+                    link.classList.remove('active');
+                });
+
+                sidebarLinks[index].classList.add('active');
+            }
+
+            window.addEventListener('scroll', highlightLink);
+            window.addEventListener('resize', highlightLink);
+            window.addEventListener('load', highlightLink);
+
+        </script>
 
 </body>
 
